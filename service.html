@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KILLER AI LAB | خدمات</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap');
+*{box-sizing:border-box}
+body{margin:0;background:#080914;color:#fff;font-family:Vazirmatn,sans-serif}
+a{text-decoration:none;color:inherit}
+header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff18;background:#0b0d1b}
+.logo{font-weight:900;font-size:19px}
+.logo span{color:#ff315d}
+.back{color:#25dfff;font-size:13px}
+.hero{max-width:1100px;margin:55px auto;padding:0 22px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.image img{width:100%;height:390px;object-fit:cover;border-radius:24px;border:1px solid #ffffff25;box-shadow:0 0 55px #974cff25}
+.tag{color:#25dfff;font-size:13px}
+h1{font-size:clamp(34px,5vw,54px);margin:15px 0}
+.gradient{background:linear-gradient(90deg,#ff315d,#a45cff,#25dfff);background-clip:text;color:transparent}
+p{color:#b9bbcc;line-height:2.2}
+.btn{display:inline-block;padding:13px 23px;border-radius:12px;background:linear-gradient(100deg,#ff315d,#974cff);font-weight:700;margin-top:15px}
+.features{max-width:1100px;margin:30px auto;padding:25px 22px 70px}
+.title{text-align:center;margin-bottom:30px}
+.title h2{font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.box{background:#121629;border:1px solid #ffffff17;border-radius:17px;padding:24px}
+.box .icon{font-size:27px}
+.box h3{margin:12px 0}
+.box p{font-size:13px}
+footer{text-align:center;padding:25px;border-top:1px solid #ffffff15;color:#85869a;font-size:12px}
+@media(max-width:700px){.hero{grid-template-columns:1fr;margin-top:30px}.image img{height:260px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="index.html">KILLER <span>AI LAB</span></a>
+<a class="back" href="index.html">← بازگشت به صفحه اصلی</a>
+</header>
+<main>
+<div class="hero">
+<div>
+<div class="tag">✦ KILLER AI LAB SERVICES</div>
+<h1 id="name"><span class="gradient">خدمات ما</span></h1>
+<p id="description">دنیای خلاقیت و طراحی حرفه‌ای.</p>
+<p id="detail"></p>
+<a class="btn" id="order" href="https://t.me/alirezakillerr">درخواست سفارش در تلگرام</a>
+</div>
+<div class="image">
+<img id="photo" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="KILLER AI LAB">
+</div>
+</div>
+<section class="features">
+<div class="title">
+<div class="tag">OUR CAPABILITIES</div>
+<h2>چه چیزی ارائه می‌دهیم؟</h2>
+</div>
+<div class="grid" id="features"></div>
+</section>
+</main>
+<footer>KILLER AI LAB © 2026 — Creative Digital Studio</footer>
+<script>
+const services={
+web:{
+name:"طراحی وب‌سایت",
+description:"وب‌سایت‌هایی مدرن، جذاب و متناسب با هویت کسب‌وکار شما.",
+detail:"از طراحی صفحه معرفی تا ساخت وب‌سایت‌های چندبخشی با ظاهر حرفه‌ای و سازگار با موبایل.",
+image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85",
+items:["طراحی اختصاصی","نمایش مناسب در موبایل","رابط کاربری مدرن"]
+},
+ai:{
+name:"هوش مصنوعی",
+description:"خلاقیت و فناوری را با ابزارهای هوش مصنوعی ترکیب کنید.",
+detail:"ایده‌پردازی و استفاده خلاقانه از ابزارهای هوش مصنوعی برای پروژه‌های دیجیتال.",
+image:"https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=85",
+items:["ایده‌پردازی هوشمند","ابزارهای AI","راهکارهای خلاقانه"]
+},
+graphic:{
+name:"طراحی گرافیک",
+description:"تصاویر حرفه‌ای برای دیده‌شدن متفاوت برند شما.",
+detail:"طراحی پوستر، بنر، کاور و محتوای گرافیکی متناسب با نیاز پروژه.",
+image:"https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1000&q=85",
+items:["طراحی پوستر","طراحی بنر","کاور شبکه‌های اجتماعی"]
+},
+content:{
+name:"تولید محتوا",
+description:"محتوای خلاقانه برای ارتباط بهتر با مخاطبان.",
+detail:"ایده‌پردازی، نگارش و آماده‌سازی محتوای متناسب با پلتفرم موردنظر.",
+image:"https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85",
+items:["ایده‌پردازی محتوا","متن تبلیغاتی","محتوای شبکه اجتماعی"]
+},
+video:{
+name:"تدوین ویدئو",
+description:"روایت ایده‌ها با ویدئوهای جذاب و منظم.",
+detail:"تدوین ویدئو برای معرفی محصولات، پروژه‌ها و محتوای شبکه‌های اجتماعی.",
+image:"https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=85",
+items:["تدوین ویدئو","تنظیم صدا","آماده‌سازی خروجی"]
+},
+brand:{
+name:"هویت بصری",
+description:"یک هویت متمایز و هماهنگ برای برند شما.",
+detail:"طراحی عناصر بصری هماهنگ برای ایجاد تصویری حرفه‌ای و ماندگار.",
+image:"https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1000&q=85",
+items:["طراحی هویت برند","انتخاب رنگ و سبک","هماهنگی بصری"]
+}
+};
+const type=new URLSearchParams(location.search).get("type");
+const service=services[type]||services.web;
+document.title=service.name+" | KILLER AI LAB";
+document.getElementById("name").textContent=service.name;
+document.getElementById("description").textContent=service.description;
+document.getElementById("detail").textContent=service.detail;
+document.getElementById("photo").src=service.image;
+document.getElementById("order").href="https://t.me/alirezakillerr?text="+encodeURIComponent("سلام، برای سفارش خدمت "+service.name+" از سایت KILLER AI LAB پیام می‌دهم.");
+document.getElementById("features").innerHTML=service.items.map((item,i)=>`
+<div class="box">
+<div class="icon">${["✦","◆","⚡"][i]}</div>
+<h3>${item}</h3>
+<p>ارائه با توجه به نیاز و جزئیات پروژه شما.</p>
+</div>
+`).join("");
+</script>
+</body>
+</html>

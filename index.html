@@ -2,476 +2,96 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="KILLER AI LAB | طراحی وب، هوش مصنوعی و خدمات دیجیتال">
-<title>KILLER AI LAB | Digital Creative Studio</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KILLER AI LAB</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
-
-:root{
---gold:#d6b36a;
---bg:#080808;
---card:#111111;
---text:#f5f2eb;
---muted:#999;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{scroll-behavior:smooth}
-
-body{
-font-family:'Vazirmatn',Tahoma,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.9;
-overflow-x:hidden;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap');
+*{box-sizing:border-box}
+body{margin:0;background:#080914;color:#fff;font-family:Vazirmatn,sans-serif}
 a{text-decoration:none;color:inherit}
-
-.container{
-width:min(1120px,90%);
-margin:auto;
-}
-
-header{
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(8,8,8,.92);
-backdrop-filter:blur(15px);
-border-bottom:1px solid #242424;
-}
-
-.nav{
-min-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-}
-
-.logo{
-font-size:21px;
-font-weight:900;
-color:var(--gold);
-letter-spacing:1px;
-}
-
-nav{
-display:flex;
-gap:25px;
-font-size:13px;
-color:#ccc;
-}
-
-nav a:hover{color:var(--gold)}
-
-.hero{
-min-height:590px;
-display:flex;
-align-items:center;
-text-align:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
-background:
-radial-gradient(ellipse at 50% 30%,#342714 0%,transparent 48%);
-}
-
-.hero-content{
-max-width:780px;
-padding:80px 0;
-position:relative;
-}
-
-.tag{
-display:inline-block;
-border:1px solid #765d31;
-color:var(--gold);
-padding:6px 17px;
-border-radius:30px;
-font-size:12px;
-margin-bottom:25px;
-}
-
-.hero h1{
-font-size:clamp(35px,7vw,68px);
-line-height:1.5;
-font-weight:900;
-}
-
-.hero h1 span{
-color:var(--gold);
-}
-
-.hero p{
-color:#aaa;
-max-width:570px;
-margin:20px auto;
-font-size:15px;
-}
-
-.actions{
-display:flex;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.btn{
-padding:12px 25px;
-border-radius:8px;
-font-size:13px;
-font-weight:700;
-transition:.3s;
-}
-
-.primary{
-background:var(--gold);
-color:#111;
-}
-
-.secondary{
-border:1px solid #555;
-color:white;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-box-shadow:0 8px 25px #d6b36a25;
-}
-
-.section{
-padding:85px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:42px;
-}
-
-.section-title small{
-color:var(--gold);
-letter-spacing:2px;
-}
-
-.section-title h2{
-font-size:30px;
-margin-top:8px;
-}
-
-.section-title p{
-color:var(--muted);
-font-size:13px;
-margin-top:8px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.card{
-background:linear-gradient(145deg,#171717,#0e0e0e);
-border:1px solid #282828;
-border-radius:15px;
-padding:28px 22px;
-transition:.3s;
-}
-
-.card:hover{
-border-color:#a8894c;
-transform:translateY(-6px);
-}
-
-.icon{
-font-size:30px;
-margin-bottom:14px;
-}
-
-.card h3{font-size:17px;margin-bottom:9px}
-
-.card p{
-color:#999;
-font-size:13px;
-}
-
-.portfolio{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.project{
-min-height:220px;
-border-radius:15px;
-padding:25px;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-border:1px solid #333;
-background:
-radial-gradient(circle at 70% 20%,#55401c,transparent 45%),
-linear-gradient(135deg,#242018,#101010);
-transition:.3s;
-}
-
-.project:nth-child(2){
-background:
-radial-gradient(circle at 70% 20%,#273a4c,transparent 45%),
-#10151c;
-}
-
-.project:nth-child(3){
-background:
-radial-gradient(circle at 70% 20%,#493044,transparent 45%),
-#171016;
-}
-
-.project:nth-child(4){
-background:
-radial-gradient(circle at 70% 20%,#35503b,transparent 45%),
-#101811;
-}
-
-.project:hover{transform:scale(1.015)}
-
-.project small{
-color:var(--gold);
-font-size:11px;
-}
-
-.project h3{font-size:19px;margin-top:5px}
-
-.project p{font-size:12px;color:#bbb}
-
-.about{
-background:#101010;
-border-top:1px solid #222;
-border-bottom:1px solid #222;
-}
-
-.about-content{
-max-width:750px;
-margin:auto;
-text-align:center;
-}
-
-.about-content p{
-color:#aaa;
-font-size:14px;
-margin-top:15px;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact p{
-color:#aaa;
-margin:12px 0 25px;
-}
-
-footer{
-border-top:1px solid #252525;
-padding:25px 0;
-text-align:center;
-color:#777;
-font-size:12px;
-}
-
-footer span{color:var(--gold)}
-
-@media(max-width:700px){
-.nav{flex-direction:column;padding:15px 0}
-nav{gap:13px;flex-wrap:wrap;justify-content:center}
-.services{grid-template-columns:1fr}
-.portfolio{grid-template-columns:1fr}
-.hero{min-height:520px}
-.section{padding:65px 0}
-}
+header{position:sticky;top:0;background:#090b19ed;backdrop-filter:blur(15px);padding:18px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff20;z-index:5}
+.logo{font-size:20px;font-weight:900}.logo span{color:#ff315d}
+nav{display:flex;gap:20px;font-size:13px;color:#ddd}
+.hero{padding:85px 7%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tag{color:#26dfff}
+h1{font-size:clamp(38px,6vw,65px);line-height:1.5;margin:15px 0}
+.gradient{background:linear-gradient(90deg,#ff315d,#a45cff,#26dfff);background-clip:text;color:transparent}
+p{color:#b9bbcc;line-height:2}
+.hero img{width:100%;height:390px;object-fit:cover;border-radius:25px;box-shadow:0 0 55px #9d55ff35}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;background:linear-gradient(100deg,#ff315d,#944cff);font-weight:bold;margin:8px 5px}
+section{padding:65px 7%}
+.heading{text-align:center;margin-bottom:35px}
+.heading small{color:#26dfff}
+.heading h2{font-size:32px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#121629;border:1px solid #ffffff18;border-radius:18px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-7px);border-color:#a45cff}
+.card img{width:100%;height:190px;object-fit:cover}
+.inside{padding:17px}
+.inside h3{margin-top:0}
+.inside p{font-size:13px}
+.more{color:#26dfff;font-size:13px}
+.note{font-size:11px;color:#888}
+.banner,.contact{margin:35px 7%;padding:40px 20px;text-align:center;border-radius:24px;background:linear-gradient(120deg,#27133f,#111b36,#301322);border:1px solid #ffffff20}
+footer{text-align:center;padding:25px;color:#888;border-top:1px solid #ffffff15}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding-top:45px}.hero img{height:260px}.cards{grid-template-columns:repeat(2,1fr)}nav{gap:10px;font-size:11px}}
+@media(max-width:450px){.cards{grid-template-columns:1fr}}
 </style>
 </head>
-
 <body>
-
 <header>
-<div class="container nav">
-<a href="#" class="logo">KILLER AI LAB</a>
-
-<nav>
-<a href="#home">خانه</a>
-<a href="#services">خدمات</a>
-<a href="#portfolio">نمونه‌کارها</a>
-<a href="#about">درباره ما</a>
-<a href="#contact">ارتباط</a>
-</nav>
-</div>
+<a class="logo" href="#">KILLER <span>AI LAB</span></a>
+<nav><a href="#services">خدمات</a><a href="#portfolio">نمونه‌کارها</a><a href="#contact">ارتباط</a></nav>
 </header>
 
-<main>
-
-<section class="hero" id="home">
-<div class="container hero-content">
-
-<div class="tag">CREATIVE DIGITAL STUDIO</div>
-
-<h1>
-ایده‌های بزرگ،
-<br>
-با <span>خلاقیت دیجیتال</span>
-</h1>
-
-<p>
-به KILLER AI LAB خوش آمدید؛
-جایی برای طراحی وب‌سایت، خلق محتوای دیجیتال
-و استفاده خلاقانه از قدرت هوش مصنوعی.
-</p>
-
-<div class="actions">
-<a href="#portfolio" class="btn primary">مشاهده نمونه‌کارها</a>
-<a href="#contact" class="btn secondary">شروع همکاری</a>
+<div class="hero">
+<div>
+<div class="tag">✦ CREATIVE DIGITAL STUDIO</div>
+<h1>ایده‌های بزرگ،<br><span class="gradient">تجربه‌های متفاوت</span></h1>
+<p>به دنیای خلاقیت دیجیتال خوش آمدید. طراحی وب، هوش مصنوعی، گرافیک و تولید محتوای حرفه‌ای در KILLER AI LAB.</p>
+<a class="btn" href="#services">مشاهده خدمات</a>
+<a class="btn" href="#portfolio">نمونه‌کارها</a>
+</div>
+<img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1000&q=85" alt="Digital Art">
 </div>
 
+<section id="services">
+<div class="heading"><small>WHAT WE DO</small><h2>خدمات <span class="gradient">ما</span></h2><p>برای هر ایده، یک راه خلاقانه داریم.</p></div>
+<div class="cards">
+<a class="card" href="service.html?type=web"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>طراحی وب‌سایت</h3><p>وب‌سایت‌های مدرن و واکنش‌گرا.</p><span class="more">جزئیات خدمات ←</span></div></a>
+<a class="card" href="service.html?type=ai"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>هوش مصنوعی</h3><p>خلاقیت با ابزارهای هوش مصنوعی.</p><span class="more">جزئیات خدمات ←</span></div></a>
+<a class="card" href="service.html?type=graphic"><img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>طراحی گرافیک</h3><p>پوستر، بنر و طراحی حرفه‌ای.</p><span class="more">جزئیات خدمات ←</span></div></a>
+<a class="card" href="service.html?type=content"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>تولید محتوا</h3><p>محتوای خلاقانه برای شبکه‌های اجتماعی.</p><span class="more">جزئیات خدمات ←</span></div></a>
+<a class="card" href="service.html?type=video"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>تدوین ویدئو</h3><p>تدوین ویدئوهای حرفه‌ای.</p><span class="more">جزئیات خدمات ←</span></div></a>
+<a class="card" href="service.html?type=brand"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>هویت بصری</h3><p>ساخت هویت یکپارچه برای برندها.</p><span class="more">جزئیات خدمات ←</span></div></a>
 </div>
 </section>
 
-<section class="section" id="services">
-<div class="container">
-
-<div class="section-title">
-<small>WHAT WE DO</small>
-<h2>خدمات تخصصی ما</h2>
-<p>راهکارهای خلاقانه برای حضور حرفه‌ای در دنیای دیجیتال</p>
-</div>
-
-<div class="services">
-
-<div class="card">
-<div class="icon">🌐</div>
-<h3>طراحی وب‌سایت</h3>
-<p>طراحی صفحات مدرن، سایت شخصی و وب‌سایت معرفی کسب‌وکار.</p>
-</div>
-
-<div class="card">
-<div class="icon">🤖</div>
-<h3>هوش مصنوعی</h3>
-<p>خلق ایده‌ها و محتوای خلاقانه با ابزارهای هوش مصنوعی.</p>
-</div>
-
-<div class="card">
-<div class="icon">🎨</div>
-<h3>طراحی گرافیک</h3>
-<p>طراحی بنر، پوستر و محتوای بصری برای برندها.</p>
-</div>
-
-<div class="card">
-<div class="icon">✍️</div>
-<h3>تولید محتوا</h3>
-<p>نگارش متن تبلیغاتی، کپشن و محتوای دیجیتال.</p>
-</div>
-
-<div class="card">
-<div class="icon">🎬</div>
-<h3>تدوین ویدئو</h3>
-<p>ساخت و تدوین محتوای ویدئویی برای شبکه‌های اجتماعی.</p>
-</div>
-
-<div class="card">
-<div class="icon">✨</div>
-<h3>هویت بصری</h3>
-<p>ایجاد ظاهر منسجم و حرفه‌ای برای برندها.</p>
-</div>
-
-</div>
+<section id="portfolio">
+<div class="heading"><small>OUR CONCEPTS</small><h2>گالری <span class="gradient">نمونه‌کارها</span></h2><p>سه نمونه تصویری نمایشی از سبک طراحی ما.</p></div>
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>هنر دیجیتال</h3><p>کانسپت مدرن</p><span class="note">تصویر نمایشی</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>طراحی گرافیک</h3><p>ترکیب رنگ و خلاقیت</p><span class="note">تصویر نمایشی</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=85"><div class="inside"><h3>کانسپت خلاقانه</h3><p>نگاه متفاوت به طراحی</p><span class="note">تصویر نمایشی</span></div></div>
 </div>
 </section>
 
-<section class="section" id="portfolio">
-<div class="container">
-
-<div class="section-title">
-<small>OUR PORTFOLIO</small>
-<h2>نمونه‌کارهای منتخب</h2>
-<p>پروژه‌های نمایشی برای معرفی سبک طراحی ما</p>
+<div class="banner">
+<h2>به دنیای KILLER AI LAB بپیوندید</h2>
+<p>ابزارها، آموزش‌ها و پروژه‌های خلاقانه را دنبال کنید.</p>
+<a class="btn" href="https://t.me/KILLERAI_FACTORY">کانال اصلی</a>
+<a class="btn" href="https://t.me/KillerAIPrompts">کانال پرامپت‌ها</a>
+<a class="btn" href="https://t.me/KillerAIFactory_bot">ربات تلگرام</a>
 </div>
 
-<div class="portfolio">
-
-<div class="project">
-<small>WEB DESIGN / DEMO</small>
-<h3>فروشگاه اینترنتی مدرن</h3>
-<p>مفهوم طراحی فروشگاه آنلاین</p>
+<div class="contact" id="contact">
+<h2>آماده شروع یک پروژه جدید هستید؟</h2>
+<p>برای ثبت سفارش و همکاری با ما در ارتباط باشید.</p>
+<a class="btn" href="https://t.me/alirezakillerr">ثبت سفارش در تلگرام</a>
 </div>
 
-<div class="project">
-<small>AI PROJECT / DEMO</small>
-<h3>استودیو هوش مصنوعی</h3>
-<p>مفهوم وب‌سایت خدمات هوشمند</p>
-</div>
-
-<div class="project">
-<small>GRAPHIC DESIGN / DEMO</small>
-<h3>کمپین تبلیغاتی</h3>
-<p>مفهوم طراحی محتوای تبلیغاتی</p>
-</div>
-
-<div class="project">
-<small>BRANDING / DEMO</small>
-<h3>هویت بصری برند</h3>
-<p>مفهوم طراحی هویت یک کسب‌وکار</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section about" id="about">
-<div class="container about-content">
-<div class="section-title">
-<small>ABOUT OUR STUDIO</small>
-<h2>درباره KILLER AI LAB</h2>
-</div>
-
-<p>
-KILLER AI LAB یک برند خلاق در حوزه خدمات دیجیتال،
-طراحی وب و ابزارهای هوش مصنوعی است.
-هدف ما تبدیل ایده‌ها به تجربه‌های دیجیتال جذاب،
-کاربردی و حرفه‌ای است.
-</p>
-</div>
-</section>
-
-<section class="section contact" id="contact">
-<div class="container">
-<div class="section-title">
-<small>LET'S WORK TOGETHER</small>
-<h2>ایده‌ای برای همکاری داری؟</h2>
-</div>
-
-<p>برای ثبت سفارش و شروع همکاری با ما در ارتباط باش.</p>
-
-<a class="btn primary"
-href="https://t.me/alirezakillerr"
-target="_blank">
-ارتباط و ثبت سفارش در تلگرام
-</a>
-</div>
-</section>
-
-</main>
-
-<footer>
-<div class="container">
-© 2026 <span>KILLER AI LAB</span> — تمامی حقوق محفوظ است.
-</div>
-</footer>
-
+<footer>KILLER AI LAB © 2026 — Creative Digital Studio</footer>
 </body>
 </html>
+
+
